@@ -9,6 +9,7 @@ module.exports = {
     "plugin:testing-library/react",
     "next",
     "next/core-web-vitals",
+    "test-typescript-prettier"
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",
@@ -19,5 +20,7 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "testing-library/no-render-in-setup": ["error", {"allowTestingFrameworkSetupHook": "beforeAll"}],
   },
 };
+
